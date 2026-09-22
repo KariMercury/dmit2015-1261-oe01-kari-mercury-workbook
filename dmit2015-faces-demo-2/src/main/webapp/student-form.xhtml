@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html
+      xmlns:p="primefaces"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns="http://www.w3.org/1999/xhtml">
+<h:head>
+    <meta charset="UTF-8"/>
+    <title>Student REgistration Form</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:messages showDetail="true"/>
+
+        <p:panel header="Student Registration">
+            <p:outputLabel for="fullName" value="Full Name"/>
+            <p:inputText id="fullName" value="#{studentFormBean.fullName}"
+                         required="true"
+                         requiredMessage="Full name is required" />
+            <br/>
+            <br/>
+            <p:outputLabel for="program" value="Program"/>
+            <p:selectOneMenu id="program"
+                             value="#{studentFormBean.program}"
+                             required="true"
+                             requiredMessage="Program is required"/>
+                    <f:selectItem itemLabel="Select PRogram"
+                                  itemValue=""
+                                  noSelectionOption="true"/>
+                    <f:selectItem itemLabel="Digital media and IT"
+                                  itemValue="DMIT"/>
+                    <f:selectItem itemLabel="Software Development"
+                                  itemValue="SDEV"/>
+
+
+        </p:panel>
+    </h:form>
+
+</h:body>
+</html>

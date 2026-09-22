@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="primefaces">
+
+<h:head>
+    <title>Course Enrollment</title>
+</h:head>
+
+<h:body>
+
+    <h2>DMIT2015 Course Enrollment</h2>
+
+    <h:form>
+
+        <p:messages />
+
+        <p:panel header="Enrollment Form">
+
+            <!-- Student Name -->
+
+            <p:outputLabel
+                    for="studentName"
+                    value="Student Name:" />
+
+            <br/>
+
+            <p:inputText
+                    id="studentName"
+                    value="#{enrollmentBean.studentName}"
+                    required="true"
+                    requiredMessage="Student name is required" />
+
+            <br/><br/>
+
+            <!-- Program Dropdown -->
+
+            <p:outputLabel
+                    for="programName"
+                    value="Program:" />
+
+            <br/>
+
+            <p:selectOneMenu
+                    id="programName"
+                    value="#{enrollmentBean.programName}"
+                    required="true"
+                    requiredMessage="Program selection is required">
+
+                <f:selectItem
+                        itemLabel="Select Program"
+                        itemValue="" />
+
+                <f:selectItem
+                        itemLabel="DMIT"
+                        itemValue="DMIT" />
+
+                <f:selectItem
+                        itemLabel="CNT"
+                        itemValue="CNT" />
+
+                <f:selectItem
+                        itemLabel="NET"
+                        itemValue="NET" />
+
+            </p:selectOneMenu>
+
+            <br/><br/>
+
+            <!-- Delivery Mode -->
+
+            <p:selectBooleanCheckbox
+                    value="#{enrollmentBean.onlineDelivery}" />
+
+            <h:outputText value="Online Delivery" />
+
+            <br/><br/>
+
+            <!-- Submit Button -->
+
+            <p:commandButton
+                    value="Submit Enrollment"
+                    action="#{enrollmentBean.submit}" />
+
+        </p:panel>
+
+    </h:form>
+
+</h:body>
+
+</html>
