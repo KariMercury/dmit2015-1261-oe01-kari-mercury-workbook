@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="primefaces">
+<h:head>
+
+    <title>Course Registration</title>
+</h:head>
+<h:body>
+    <h2>DMIT2015 Course Registration</h2>
+
+    <h:form>
+        <p:messages id="messages" showDetail="true"/>
+        <p:panel header="Student Registration Form">
+            <p:outputLabel for="studentName"
+                           value="Student Name:"/>
+            <br/>
+            <p:inputText id="studentName" value="#{courseRegistrationBean.studentName}"
+                         required="true"
+                         requiredMessage="Student name is required"/>
+            <br/>
+            <br/>
+            <p:outputLabel for="courseName"
+                           value="Course"/>
+            <br/>
+            <p:selectOneMenu
+                id="courseName" value="#{courseRegistrationBean.courseName}">
+                <f:selectItem
+                        itemLabel="Select a Course"
+                        itemValue="" />
+                <f:selectItem
+                        itemLabel="DMIT2015"
+                        itemValue="DMIT2015" />
+                <f:selectItem
+                        itemLabel="CPSC1517"
+                        itemValue="CPSC1517" />
+
+                <f:selectItem
+                        itemLabel="SDEV2301"
+                        itemValue="SDEV2301" />
+            </p:selectOneMenu>
+
+        <br/>
+        <br/>
+        <p:selectBooleanCheckbox
+            value="#{courseRegistrationBean.onlineDelivery}"/>
+        <h:outputText
+            value="Online DElivery"/>
+        <br/>
+        <br/>
+        <p:commandButton
+            value="Submit REgistration"
+            action="#{courseRegistrationBean.submit}"
+            update="@form"/>
+        </p:panel>
+    </h:form>
+
+
+</h:body>
+</html>
