@@ -1,0 +1,11 @@
+# Lints that catch tonight's pitfalls. No package dependencies, so
+# `dart analyze` works straight from a clone with no `pub get`.
+#
+# Deliberately NOT enabled: prefer_final_locals. Several demos use `var` on
+# purpose to contrast it with `final` — the lint would fight the lesson.
+linter:
+  rules:
+    - always_declare_return_types
+    - avoid_positional_boolean_parameters
+    - unnecessary_null_checks
+    - unnecessary_new

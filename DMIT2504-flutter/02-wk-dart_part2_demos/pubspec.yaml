@@ -1,0 +1,5 @@
+name: dart_part2_demos
+description: DMIT 2504 Week 1 — Dart Part 2 in-class demos (functions, Lists, objects, null safety).
+version: 1.0.0
+environment:
+  sdk: ^3.0.0

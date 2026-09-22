@@ -1,0 +1,36 @@
+name: week_03_profile_theme
+description: DMIT 2504 Week 3 Day 2 - Themes and Styling live demo.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # STEP 3 (fonts): uncomment the block below AFTER you download the .ttf files
+  # from https://fonts.google.com and copy them into assets/fonts/
+  # (see assets/fonts/README.md). The app will not build if the files are missing.
+  #
+  # fonts:
+  #   - family: Merriweather
+  #     fonts:
+  #       - asset: assets/fonts/Merriweather-Regular.ttf
+  #       - asset: assets/fonts/Merriweather-Italic.ttf
+  #         style: italic
+  #       - asset: assets/fonts/Merriweather-Bold.ttf
+  #         weight: 700
+  #   - family: Pacifico
+  #     fonts:
+  #       - asset: assets/fonts/Pacifico-Regular.ttf

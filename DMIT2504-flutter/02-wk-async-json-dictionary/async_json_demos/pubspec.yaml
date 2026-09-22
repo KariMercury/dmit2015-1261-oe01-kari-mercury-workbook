@@ -1,0 +1,8 @@
+name: async_json_demos
+description: DMIT 2504 Week 2 Day 1 - small runnable demos for Futures, async/await and dart:convert
+version: 1.0.0
+publish_to: none
+environment:
+  sdk: ^3.0.0
+dev_dependencies:
+  lints: ^4.0.0
